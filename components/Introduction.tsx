@@ -4,7 +4,7 @@ import { IoMailUnreadOutline } from 'react-icons/io5'
 
 const Introduction = () => {
   return (
-    <section className='w-1/2 flex flex-col space-y-12'>
+    <section className='w-full lg:w-1/2 flex flex-col space-y-12'>
       <div className='space-y-2'>
         <p className='text-primary-hover text-lg font-heading'>Hola! Soy</p>
         <h1 className='text-5xl font-bold text-foreground'>Jesús Viafara</h1>
@@ -18,11 +18,11 @@ const Introduction = () => {
           experiencia de usuario.
         </p>
       </div>
-      <div className='flex space-x-4'>
+      <div className='flex flex-col space-y-4 w-full xs:w-1/2 sm:space-y-0 sm:space-x-4 sm:flex-row'>
         <button className='bg-primary rounded-xl group hover:bg-primary-hover cursor-pointer'>
           <a
             href='#proyectos'
-            className='flex justify-between items-center space-x-2 w-full h-full py-4 px-6 '
+            className='flex justify-between items-center space-x-2 w-full h-full py-4 px-6 text-nowrap '
           >
             <p>Ver mis Proyectos</p>
             <FaArrowRightLong
@@ -41,7 +41,7 @@ const Introduction = () => {
           </a>
         </button>
       </div>
-      <div className='flex space-x-8'>
+      <div className='flex justify-center md:justify-start space-x-8'>
         <Link
           href={'https://github.com/Jviafara'}
           target='_blank'

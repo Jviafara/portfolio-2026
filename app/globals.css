@@ -43,6 +43,8 @@
   /* Hero Glow */
   --glow-primary: rgba(109, 93, 252, 0.45);
   --glow-secondary: rgba(79, 140, 255, 0.25);
+
+  /* --mobile: 480px; */
 }
 
 @theme inline {
@@ -93,6 +95,9 @@
   --font-sans: var(--font-inter);
   --font-heading: var(--font-sora);
   --font-mono: var(--font-mono);
+
+  /* Breakpoints */
+  --breakpoint-xs: 480px;
 }
 
 body {

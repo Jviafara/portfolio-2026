@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: 'Jesús Viafara | Portfolio',
   description:
     'Jesús Viafara es un desarrollador web y diseñador de experiencia de usuario con sede en Colombia. Con una pasión por crear experiencias digitales atractivas y funcionales, Jesús combina habilidades técnicas y creatividad para ofrecer soluciones innovadoras a sus clientes.',
+  icons: {
+    icon: '/logo.png',
+  },
 }
 
 export default function RootLayout({
@@ -33,7 +36,7 @@ export default function RootLayout({
       lang='es'
       className={`${inter.variable} ${inter.variable} h-full antial iased`}
     >
-      <body className='min-h-full flex flex-col bg-background'>{children}</body>
+      <body className='min-h-full max-w-[100vw] flex flex-col bg-background'>{children}</body>
     </html>
   )
 }

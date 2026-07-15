@@ -5,7 +5,7 @@ const SobreMi = () => {
   return (
     <div
       id='sobre-mi'
-      className='w-full flex items-center justify-between'
+      className='w-[90%] md:w-[85%] lg:w-[70%] flex flex-col lg:flex-row gap-14 items-center justify-between mt-24 mx-auto'
     >
       <Introduction />
       <CodeBlock />

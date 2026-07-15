@@ -3,9 +3,9 @@ import SobreMi from '@/components/SobreMi'
 
 export default function Home() {
   return (
-    <div>
+    <div className='max-w-screen'>
       <Navbar />
-      <main className='max-w-screen min-h-screen flex flex-col mt-20 px-24 '>
+      <main className='max-w-screen min-h-screen overflow-hidden flex flex-col items-center mt-20'>
         <SobreMi />
       </main>
     </div>
