@@ -1,34 +1,32 @@
 'use client'
 
-import { navbarMenu } from '@/lib/navbar-menu'
+import { useActiveSection } from '@/hooks/useActiveSection'
+import { navbarMenu, SECTIONS } from '@/lib/const'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { FiDownload } from 'react-icons/fi'
-import { TiThMenu } from 'react-icons/ti'
 
 const Navbar = () => {
-  const pathname = usePathname() // Gets "/path"
-  const [hash, setHash] = useState('')
+  const [section, setSection] = useState('')
+
+  const activeSection = useActiveSection(SECTIONS)
 
   useEffect(() => {
     const handleHashChange = () => {
-      setHash(window.location.hash)
+      setSection(activeSection)
     }
 
     handleHashChange()
-    window.addEventListener('hashchange', handleHashChange)
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange)
-    }
-  }, [pathname])
+  }, [activeSection])
 
   const handleClick = (link: string) => {
+    console.log('click:', link)
     const element = document.getElementById(link)
+    console.log(document.getElementById(link))
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
+      setSection(link)
     }
   }
 
@@ -41,21 +39,18 @@ const Navbar = () => {
           width={50}
           height={50}
         />
-        <h1 className='font-bold text-lg uppercase text-shadow-(--text-shadow-glow) text-nowrap hidden xl:inline-flex'>
-          Jesús Viafara
-        </h1>
+        <h1 className='font-bold text-lg uppercase text-shadow-(--text-shadow-glow) text-nowrap hidden xl:inline-flex'>Jesús Viafara</h1>
       </section>
       <section className='absolute left-1/2 -translate-x-1/2 flex flex-2 justify-center items-center'>
         <ul className='hidden lg:flex justify-center items-center space-x-6'>
           {navbarMenu.map(item => (
             <li key={item.href}>
-              <a
-                href={item.href}
+              <button
                 onClick={() => handleClick(item.href)}
-                className={`${hash === item.href || (hash === '' && item.href === '#inicio') ? 'text-primary border-b-2 pb-2 border-primary' : ''} hover:text-primary text-nowrap`}
+                className={`${section === item.href ? 'text-primary border-b-2 pb-2 border-primary' : ''} hover:text-primary text-nowrap`}
               >
                 {item.label}
-              </a>
+              </button>
             </li>
           ))}
         </ul>
@@ -69,12 +64,6 @@ const Navbar = () => {
         >
           <span className='hidden xl:inline-flex'>Descargar</span> CV <FiDownload />
         </Link>
-        <div className='lg:hidden px-4 hover:cursor-pointer group'>
-          <TiThMenu
-            size={32}
-            className='group-hover:text-primary-hover text-muted-foreground'
-          />
-        </div>
       </div>
     </div>
   )

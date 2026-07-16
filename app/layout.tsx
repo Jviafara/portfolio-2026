@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 import { Sora, Inter, JetBrains_Mono } from 'next/font/google'
+import ScrollUpButton from '@/components/ScrollUpButton'
 
 export const sora = Sora({
   subsets: ['latin'],
@@ -36,7 +37,10 @@ export default function RootLayout({
       lang='es'
       className={`${inter.variable} ${inter.variable} h-full antial iased`}
     >
-      <body className='min-h-full max-w-[100vw] flex flex-col bg-background'>{children}</body>
+      <body className='min-h-full max-w-[100vw] w-full flex flex-col bg-background'>
+        {children}
+        <ScrollUpButton />
+      </body>
     </html>
   )
 }
