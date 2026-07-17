@@ -12,7 +12,7 @@ export function useActiveSection(sectionIds: string[]) {
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
         // Change state if the section occupies at least 50% of the viewport
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.8) {
           setActiveSection(entry.target.id)
         }
       })

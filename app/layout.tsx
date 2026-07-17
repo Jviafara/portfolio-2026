@@ -4,6 +4,11 @@ import './globals.css'
 import { Sora, Inter, JetBrains_Mono } from 'next/font/google'
 import ScrollUpButton from '@/components/ScrollUpButton'
 
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
 export const sora = Sora({
   subsets: ['latin'],
   variable: '--font-sora',

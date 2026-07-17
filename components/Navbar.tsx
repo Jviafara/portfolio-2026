@@ -33,7 +33,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className='w-full max-w-[100vw] sticky z-50 bg-background/70 top-0 left-0 flex items-center justify-between  border-b-2 border-muted/10  py-3  px-5 md:px-16 '>
+    <div className='w-full max-w-[100vw] fixed z-50 bg-background/70 top-0 left-0 flex items-center justify-between  border-b-2 border-muted/10  py-3  px-5 md:px-16 '>
       <section className='flex  items-center flex-1 lg:flex-none'>
         <Image
           src='/logo.png'
