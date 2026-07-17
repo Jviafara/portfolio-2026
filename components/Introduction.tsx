@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BsWhatsapp } from 'react-icons/bs'
 import { FaArrowRightLong, FaGithub, FaLinkedin } from 'react-icons/fa6'
 import { IoMailUnreadOutline } from 'react-icons/io5'
 
@@ -7,15 +8,13 @@ const Introduction = () => {
     <section className='w-full lg:w-1/2 flex flex-col space-y-12'>
       <div className='space-y-2'>
         <p className='text-primary-hover text-lg font-heading'>Hola! Soy</p>
-        <h1 className='text-5xl font-bold text-foreground'>Jesús Viafara</h1>
-        <h2 className='w-fit text-4xl font-semibold bg-linear-to-r from-accent to-primary bg-clip-text text-transparent font-heading'>
+        <h1 className='text-3xl md:text-4xl xl:text-5xl font-bold text-foreground'>Jesús Viafara</h1>
+        <h2 className='w-fit text-2xl md:text-3xl xl:text-4xl font-semibold bg-linear-to-r from-accent to-primary bg-clip-text text-transparent font-heading'>
           Desarrollador de Software
         </h2>
         <p className='text-muted'>
-          Ingeniero electrónico y desarrollador Full Stack con experiencia en aplicaciones web modernas, especializado
-          en FrontEnd usando lenguajes como typescript y javascript. Desarrollando bajo el stack MERN, y Next JS y con
-          experiencia trabajando con el framework Angular JS. Enfocado en interfaces responsivas y centradas en la
-          experiencia de usuario.
+          Construyo aplicaciones web modernas, rápidas y escalables con tecnologías de vanguardia. Apasionado por
+          resolver problemas y crear experiencias increíbles!
         </p>
       </div>
       <div className='flex flex-col space-y-4 w-full xs:w-1/2 sm:space-y-0 sm:space-x-4 sm:flex-row'>
@@ -56,6 +55,15 @@ const Introduction = () => {
           target='_blank'
         >
           <FaLinkedin
+            size={28}
+            className='text-muted'
+          />
+        </Link>
+        <Link
+          href={'https://web.whatsapp.com/send?phone=573016288717'}
+          target='_blank'
+        >
+          <BsWhatsapp
             size={28}
             className='text-muted'
           />

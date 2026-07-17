@@ -1,18 +1,8 @@
+import { SAMPLECODE } from '@/lib/const'
 import { codeToHtml } from 'shiki'
 
 const CodeBlock = async () => {
-  const sampleCode = `const developer = {
-  name: 'Jesús Viafara',
-  role: 'Desarrollador de Software',
-  skills: ['React', 'TypeScript', 'Node.js'],
-  building: 'Soluciones digitales'
-};
-
-function createImpact() {
-  return 'Código que genera impacto 🚀';
-}`
-
-  const highlightedHtml = await codeToHtml(sampleCode, {
+  const highlightedHtml = await codeToHtml(SAMPLECODE, {
     lang: 'javascript',
     theme: 'tokyo-night',
   })

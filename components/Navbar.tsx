@@ -1,7 +1,7 @@
 'use client'
 
 import { useActiveSection } from '@/hooks/useActiveSection'
-import { navbarMenu, SECTIONS } from '@/lib/const'
+import { NAVBARMENU, SECTIONS } from '@/lib/const'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
@@ -21,11 +21,13 @@ const Navbar = () => {
   }, [activeSection])
 
   const handleClick = (link: string) => {
-    console.log('click:', link)
     const element = document.getElementById(link)
-    console.log(document.getElementById(link))
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      const yOffset = element.getBoundingClientRect().top + window.scrollY - 100
+      window.scrollTo({
+        top: yOffset,
+        behavior: 'smooth',
+      })
       setSection(link)
     }
   }
@@ -39,15 +41,17 @@ const Navbar = () => {
           width={50}
           height={50}
         />
-        <h1 className='font-bold text-lg uppercase text-shadow-(--text-shadow-glow) text-nowrap hidden xl:inline-flex'>Jesús Viafara</h1>
+        <h1 className='font-bold text-lg uppercase text-shadow-(--text-shadow-glow) text-nowrap hidden xl:inline-flex'>
+          Jesús Viafara
+        </h1>
       </section>
       <section className='absolute left-1/2 -translate-x-1/2 flex flex-2 justify-center items-center'>
         <ul className='hidden lg:flex justify-center items-center space-x-6'>
-          {navbarMenu.map(item => (
+          {NAVBARMENU.map(item => (
             <li key={item.href}>
               <button
                 onClick={() => handleClick(item.href)}
-                className={`${section === item.href ? 'text-primary border-b-2 pb-2 border-primary' : ''} hover:text-primary text-nowrap`}
+                className={`${section === item.href ? 'text-primary border-b-2 pb-2 border-primary' : ''} cursor-pointer hover:text-primary text-nowrap`}
               >
                 {item.label}
               </button>
