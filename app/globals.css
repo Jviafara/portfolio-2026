@@ -7,7 +7,7 @@
 
   /* Surfaces */
   --card: #0d1323;
-  --card-secondary: #131b2d;
+  --card-secondary: #19212e;
   --border: #222c44;
 
   /* Brand */
@@ -168,6 +168,9 @@ pre {
 }
 
 /* Inactive bullet color */
+.swiper-pagination-bullet-active {
+  background-color: var(--color-accent) !important;
+}
 .swiper-pagination-bullet {
   background-color: var(--color-primary) !important;
 }

@@ -3,6 +3,7 @@ import Inicio from '@/components/Inicio'
 import Footer from '@/components/Footer'
 import SobreMi from '@/components/SobreMi'
 import Habilidades from '@/components/Habilidades'
+import Experiencia from '@/components/Experiencia'
 
 export default function Home() {
   return (
@@ -12,12 +13,7 @@ export default function Home() {
         <Inicio />
         <SobreMi />
         <Habilidades />
-        <div
-          id='experiencia'
-          className='min-h-screen'
-        >
-          experiencia
-        </div>
+        <Experiencia />
 
         <div
           id='proyectos'
