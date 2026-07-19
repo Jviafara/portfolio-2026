@@ -4,6 +4,7 @@ import Footer from '@/components/Footer'
 import SobreMi from '@/components/SobreMi'
 import Habilidades from '@/components/Habilidades'
 import Experiencia from '@/components/Experiencia'
+import Proyectos from '@/components/Proyectos'
 
 export default function Home() {
   return (
@@ -14,13 +15,7 @@ export default function Home() {
         <SobreMi />
         <Habilidades />
         <Experiencia />
-
-        <div
-          id='proyectos'
-          className='min-h-screen'
-        >
-          proyectos
-        </div>
+        <Proyectos />
         <div
           id='contacto'
           className='min-h-screen'

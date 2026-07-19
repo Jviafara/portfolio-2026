@@ -22,7 +22,7 @@ function createImpact() {
 
 export const TECNOLOGIAS = [
   {
-    name: 'Angular',
+    name: 'AngularJS',
     icon: '/skills/angular.png',
     level: 70,
   },
@@ -32,12 +32,12 @@ export const TECNOLOGIAS = [
     level: 90,
   },
   {
-    name: 'NextJs',
+    name: 'Next.js',
     icon: '/skills/next.png',
     level: 85,
   },
   {
-    name: 'Node Js',
+    name: 'Node.js',
     icon: '/skills/node.png',
     level: 70,
   },
@@ -67,7 +67,7 @@ export const TECNOLOGIAS = [
     level: 100,
   },
   {
-    name: 'Tailwind',
+    name: 'Tailwind CSS',
     icon: '/skills/tailwind.png',
     level: 90,
   },
@@ -85,5 +85,35 @@ export const TECNOLOGIAS = [
     name: 'Git',
     icon: '/skills/Git.png',
     level: 90,
+  },
+]
+
+export const PROYECTOS = [
+  {
+    name: 'Rubik Store',
+    description:
+      'Web store demo page originalmente desarrollada con el stack MERN y posteriormente migrada a Next.js e implementando el servicio de autenticacion BetterAuth.',
+    tecnologias: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'BetterAuth'],
+    image: '/projects/RubikStore.png',
+    gitLink: 'https://github.com/Jviafara/rubick-store-nextjs ',
+    url: 'https://rubick-store-nextjs.vercel.app/',
+  },
+  {
+    name: 'MovieNest',
+    description:
+      'Libreria de series y peliculas originalmente desarrollada con el stack MERN y posteriormente migrada a Next.js e implementando el servicio de autenticacion BetterAuth.',
+    tecnologias: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'BetterAuth'],
+    image: '/projects/MovieNest.png',
+    gitLink: 'https://github.com/Jviafara/movie-nest-nextjs',
+    url: 'https://movie-nest-nextjs.vercel.app/',
+  },
+  {
+    name: 'Weather App',
+    description:
+      'Aplicación web (SPA) basada en React para consultar las condiciones meteorológicas actuales y la previsión del tiempo de cualquier ciudad del mundo, utilizando la API OpenWeatherMap.',
+    tecnologias: ['React', 'JavaScript', 'Tailwind CSS'],
+    image: '/projects/WeatherApp.png',
+    gitLink: 'https://github.com/Jviafara/weatherApp',
+    url: 'https://weatherappjv.netlify.app/',
   },
 ]
