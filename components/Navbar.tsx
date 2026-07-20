@@ -4,10 +4,13 @@ import { useActiveSection } from '@/hooks/useActiveSection'
 import { NAVBARMENU, SECTIONS } from '@/lib/const'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { FiDownload } from 'react-icons/fi'
 
 const Navbar = () => {
+  const pathname = usePathname()
+  const router = useRouter()
   const [section, setSection] = useState('')
 
   const activeSection = useActiveSection(SECTIONS)
@@ -21,6 +24,7 @@ const Navbar = () => {
   }, [activeSection])
 
   const handleClick = (link: string) => {
+    if (pathname === '/proyectos') router.push(`/#${link}`)
     const element = document.getElementById(link)
     if (element) {
       const yOffset = element.getBoundingClientRect().top + window.scrollY - 100

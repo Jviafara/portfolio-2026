@@ -4,7 +4,14 @@ import Tag from './Tag'
 
 const Experiencia = () => {
   return (
-    <motion.div className='w-full flex flex-col justify-start space-y-6'>
+    <motion.div
+      id='experiencia'
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: '-200px' }}
+      transition={{ duration: 0.5 }}
+      className='w-full flex flex-col justify-start space-y-6'
+    >
       <section>
         <h1 className='text-lg text-primary-hover uppercase'>Experiencia Laboral</h1>
         <h1 className='text-3xl font-bold text-primary-foreground'>Mi trayectoria profesional</h1>

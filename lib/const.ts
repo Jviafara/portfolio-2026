@@ -108,6 +108,15 @@ export const PROYECTOS = [
     url: 'https://movie-nest-nextjs.vercel.app/',
   },
   {
+    name: 'Job Tracker',
+    description:
+      'Job Application Tracker es una aplicación web diseñada para organizar y gestionar su búsqueda de empleo de forma sencilla y visual. El proyecto incluye un tablero estilo Kanban para el seguimiento de las solicitudes a través de las diferentes etapas mediante una interfaz Drag and Drop, lo que la convierte en una herramienta práctica para quienes buscan empleo.',
+    tecnologias: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'Better Auth', 'shadcn/ui', 'dnd-kit'],
+    image: '/projects/job-application-tracker.jpg',
+    gitLink: 'https://github.com/Jviafara/job-application-tracker',
+    url: 'https://job-application-tracker-pi-weld.vercel.app/',
+  },
+  {
     name: 'Weather App',
     description:
       'Aplicación web (SPA) basada en React para consultar las condiciones meteorológicas actuales y la previsión del tiempo de cualquier ciudad del mundo, utilizando la API OpenWeatherMap.',

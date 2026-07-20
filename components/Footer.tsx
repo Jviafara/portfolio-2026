@@ -3,10 +3,15 @@
 import { NAVBARMENU } from '@/lib/const'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { FaGithub, FaLinkedin, FaRegCopyright } from 'react-icons/fa6'
 
 const Footer = () => {
+  const pathname = usePathname()
+  const router = useRouter()
+
   const handleClick = (link: string) => {
+    if (pathname === '/proyectos') router.push(`/#${link}`)
     const element = document.getElementById(link)
     if (element) {
       const yOffset = element.getBoundingClientRect().top + window.scrollY - 100
@@ -18,7 +23,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className='w-full max-w-[100vw] border-t-2 border-muted/10 relative bottom-0 left-0 flex flex-col space-y-12 items-center justify-between pt-8 px-5 md:px-16 -mb-10'>
+    <footer className='w-full max-w-[100vw] border-t-2 border-muted/10 relative bottom-0 left-0 flex flex-col space-y-12 items-center justify-between pt-8 px-5 md:px-16 '>
       <div className='w-full flex flex-col md:flex-row space-y-8 md:space-y-0 items-center md:items-start justify-between'>
         <section className='flex flex-col grow items-center justify-center md:items-baseline space-y-2'>
           <div className='flex space-x-2 items-center font-bold'>

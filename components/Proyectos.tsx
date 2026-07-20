@@ -6,7 +6,14 @@ import ProjectCard from './ProjectCard'
 
 const Proyectos = () => {
   return (
-    <motion.div className='w-full flex flex-col space-y-4'>
+    <motion.div
+      id='proyectos'
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: '-200px' }}
+      transition={{ duration: 0.5 }}
+      className='w-full flex flex-col space-y-4'
+    >
       <section className='w-full flex items-center justify-between '>
         <h1 className='uppercase text-primary text-lg'>Proyectos destacados</h1>
         <Link
@@ -16,7 +23,7 @@ const Proyectos = () => {
           Ver todos los Proyectos <FaArrowRightLong />
         </Link>
       </section>
-      <section className='w-full grid gap-4 items-stretch sm:grid-cols-2 lg:grid-cols-3'>
+      <section className='w-full grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
         {PROYECTOS.slice(0, 3).map((project, index) => (
           <div
             key={index}

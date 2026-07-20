@@ -107,6 +107,21 @@ body {
   scroll-behavior: smooth;
 }
 
+input,
+textarea {
+  background: var(--input);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  outline: none;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--ring); /* Ring color and thickness */
+  outline-offset: 2px; /* Gap between border and ring */
+}
+
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .scrollbar-hide::-webkit-scrollbar {
